@@ -8,12 +8,12 @@ module.exports.run = async (Client, message, args, prefix) => {
     let reactRole = message.mentions.roles.first()
 
     // if no role provided it will send this
-    if(!reactRole) return message.channel.send(`Say a role you want to get added`)
+    if(!reactRole) return message.channel.send(`Oznacz rolę, którą chcesz dodać`)
 
     // create an embed
     const embed = new discord.MessageEmbed()
     .setColor("RANDOM") // the color of the embed 
-    .setDescription(`React with ✅ to get the role ${reactRole}`) // desc of the embed
+    .setDescription(`Reaguj za pomocą ✅, aby otrzymać rolę ${reactRole}`) // desc of the embed
 
     // send the embed.
     let msg = await message.channel.send(embed)
